@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "version": "1.0.0",
+  "name": "Bookmarklet-extension",
+  "description": "This extension will contain our bookmarklets",
+  "author": "Rodrigo Erades",
+  "background": {
+    "scripts": ["scripts/background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "Isotype.png",
+    "default_popup": "initial.html"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "file://*/*",
+    "storage",
+    "activeTab"
+  ],
+  "icons": {
+    "16": "Isotype.png",
+    "48": "Isotype.png",
+    "128": "Isotype.png"
+  },
+  "content_scripts": [{
+    "js": ["scripts/initial.js"],
+    "css": ["css/initial.css"],
+    "matches": ["<all_urls>"]
+  }]
+}

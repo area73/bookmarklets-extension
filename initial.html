@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookmarklet</title>
+    <link rel="stylesheet" href="./css/spectre-0.5.9/dist/spectre.css">
+    <link rel="stylesheet" href="./css/spectre-0.5.9/dist/spectre-exp.css">
+    <link rel="stylesheet" href="./css/spectre-0.5.9/dist/spectre-icons.css">
+    <link rel="stylesheet" href="./css/popup.css">
+
+</head>
+<body>
+<div id="main">
+    <header>
+        <h1>Cabify header</h1>
+    </header>
+
+    <input type="radio" id="tab1" name="tabs" class="tab-locator" hidden checked />
+    <input type="radio" id="tab2" name="tabs" class="tab-locator" hidden />
+    <input type="radio" id="tab3" name="tabs" class="tab-locator" hidden />
+    <input type="radio" id="tab4" name="tabs" class="tab-locator" hidden />
+
+    <ul class="tab tab-block">
+        <li class="tab-item"><label for="tab1"><a>Security</a></label></li>
+        <li class="tab-item"><label for="tab2"><a>Performance</a></label></li>
+        <li class="tab-item"><label for="tab3"><a>Marshal</a></label></li>
+        <li class="tab-item"><label for="tab4"><a>Tools</a></label></li>
+    </ul>
+
+    <div class="tabs">
+        <div class="tab-content">
+            <h2>SECURITY</h2>
+            <div class="form-group">
+                <label class="form-switch">
+                    <input type="checkbox">
+                    <i class="form-icon"></i> Send me emails with news and tips
+                </label>
+            </div>
+        </div>
+
+        <div class="tab-content">
+            <h2>PERFORMANCE</h2>
+        </div>
+
+        <div class="tab-content">
+            <h2>MASHALL</h2>
+        </div>
+
+        <div class="tab-content">
+            <h2>TOOLS</h2>
+            <div class="form-group">
+                <label class="form-switch">
+                    <input type="checkbox" id="customCSS" >
+                    <i class="form-icon"></i> Add custom CSS
+                </label>
+            </div>
+            <div id="message"></div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+</div>
+<script src="scripts/initial.js"></script>
+</body>
+
+</html>
