@@ -10,7 +10,7 @@
   },
   "browser_action": {
     "default_icon": "Isotype.png",
-    "default_popup": "initial.html"
+    "default_popup": "popup.html"
   },
   "options_page": "options.html",
   "permissions": [
@@ -28,8 +28,8 @@
     "128": "Isotype.png"
   },
   "content_scripts": [{
-    "js": ["scripts/initial.js"],
-    "css": ["css/initial.css"],
+    "js": ["scripts/content.js"],
+    "css": ["css/content.css"],
     "matches": ["<all_urls>"]
   }]
 }
