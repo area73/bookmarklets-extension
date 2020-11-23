@@ -45,7 +45,7 @@ document.getElementById('customCSS').onclick = function() {
 
 
 
-
+/* ESTO FUNCIONA
 document.getElementById("cssVulnerability").addEventListener('click', () => {
   console.log("Popup DOM fully loaded and parsed");
 
@@ -53,6 +53,7 @@ document.getElementById("cssVulnerability").addEventListener('click', () => {
     //You can play with your DOM here or check URL against your regex
     console.log('Tab script:');
     console.log(document.body);
+    console.log("document.styleSheets--->",document.styleSheets);
     return document.body.innerHTML;
   }
 
@@ -60,11 +61,32 @@ document.getElementById("cssVulnerability").addEventListener('click', () => {
   chrome.tabs.executeScript({
     code: '(' + modifyDOM + ')();' //argument here is a string but function.toString() returns function's code
   }, (results) => {
+    bklog('Popup script 2:')
+    bklog(results)
+    bklog(results[0])
     //Here we have just the innerHTML and not DOM structure
     console.log('Popup script:')
     console.log(results[0]);
   });
 });
+
+*/
+
+document.getElementById("cssVulnerability").addEventListener('click', () => {
+  console.log("Popup DOM fully loaded and parsed");
+  chrome.tabs.query({
+    active: true,
+    currentWindow: true
+  }, function(tabs) {
+    var currentTab = tabs[0]; // there will be only one in this array
+    bklog(currentTab); // also has properties like currentTab.id
+    bklog(document.body);
+    bklog(currentTab)
+  });
+
+});
+
+
 
 
 
